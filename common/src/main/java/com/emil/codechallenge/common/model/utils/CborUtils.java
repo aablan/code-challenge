@@ -1,8 +1,4 @@
-/*
- * Copyright (C) Siemens AG 2019 ALL RIGHTS RESERVED.
- */
-
-package com.emil.codechallenge.datagenerator.utils;
+package com.emil.codechallenge.common.model.utils;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -14,22 +10,22 @@ import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-public class CborUtils {
+class CborUtils {
 
   private static final ObjectMapper cborMapper = defaultObjectMapper(new CBORFactory());
 
 
-  public static <T> ObjectWriter cborWriter(Class<T> clazz) {
+  static <T> ObjectWriter cborWriter(Class<T> clazz) {
     return cborMapper.writer()
         .forType(clazz);
   }
 
-  public static <T> ObjectReader cborReader(Class<T> clazz) {
+  static <T> ObjectReader cborReader(Class<T> clazz) {
     return cborMapper.reader()
         .forType(clazz);
   }
 
-  public static ObjectMapper defaultObjectMapper(JsonFactory jsonFactory) {
+  private static ObjectMapper defaultObjectMapper(JsonFactory jsonFactory) {
     return new ObjectMapper(jsonFactory)
         .registerModule(new JavaTimeModule())
         .registerModule(new Jdk8Module())
@@ -38,9 +34,5 @@ public class CborUtils {
         .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
         .configure(DeserializationFeature.READ_DATE_TIMESTAMPS_AS_NANOSECONDS, false)
         .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-  }
-
-  public static ObjectMapper defaultObjectMapper() {
-    return defaultObjectMapper(null);
   }
 }

@@ -1,10 +1,7 @@
-/*
- * Copyright (C) Siemens AG 2019 ALL RIGHTS RESERVED.
- */
+package com.emil.codechallenge.common.model.utils;
 
-package com.emil.codechallenge.datagenerator.utils;
-
-import static com.emil.codechallenge.datagenerator.utils.CborUtils.cborWriter;
+import static com.emil.codechallenge.common.model.utils.CborUtils.cborReader;
+import static com.emil.codechallenge.common.model.utils.CborUtils.cborWriter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.IOException;
@@ -41,28 +38,28 @@ public class KafkaUtils {
     };
   }
 
-//  public static <T> Deserializer<T> kafkaDeserializerWithCborCodec(Class<T> clazz) {
-//    return new Deserializer<T>() {
-//      @Override
-//      public void configure(Map<String, ?> configs, boolean isKey) {
-//
-//      }
-//
-//      @Override
-//      public T deserialize(String topic, byte[] data) {
-//        val reader = cborReader(clazz);
-//        try {
-//          return reader.readValue(data);
-//        } catch (IOException e) {
-//          log.error("Failed to read data for object of type " + clazz.getName(), e);
-//        }
-//        return null;
-//      }
-//
-//      @Override
-//      public void close() {
-//
-//      }
-//    };
-//  }
+  public static <T> Deserializer<T> kafkaDeserializerWithCborCodec(Class<T> clazz) {
+    return new Deserializer<T>() {
+      @Override
+      public void configure(Map<String, ?> configs, boolean isKey) {
+
+      }
+
+      @Override
+      public T deserialize(String topic, byte[] data) {
+        val reader = cborReader(clazz);
+        try {
+          return reader.readValue(data);
+        } catch (IOException e) {
+          log.error("Failed to read data for object of type " + clazz.getName(), e);
+        }
+        return null;
+      }
+
+      @Override
+      public void close() {
+
+      }
+    };
+  }
 }

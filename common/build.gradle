@@ -1,0 +1,15 @@
+dependencies {
+  implementation(
+      "org.springframework.kafka:spring-kafka:2.3.0.RELEASE",
+      "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.10.0",
+      "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.0",
+      "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.0"
+  )
+  compileOnly(
+      "org.projectlombok:lombok:1.18.10"
+  )
+  annotationProcessor(
+      "org.projectlombok:lombok:1.18.10"
+  )
+}
+

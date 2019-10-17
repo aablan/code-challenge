@@ -1,7 +1,3 @@
-/*
- * Copyright (C) Siemens AG 2019 ALL RIGHTS RESERVED.
- */
-
 package com.emil.codechallenge.common.model.commons;
 
 import lombok.AllArgsConstructor;
