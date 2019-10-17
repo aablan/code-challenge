@@ -10,17 +10,17 @@ import com.fasterxml.jackson.dataformat.cbor.CBORFactory;
 import com.fasterxml.jackson.datatype.jdk8.Jdk8Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-class CborUtils {
+public class CborUtils {
 
   private static final ObjectMapper cborMapper = defaultObjectMapper(new CBORFactory());
 
 
-  static <T> ObjectWriter cborWriter(Class<T> clazz) {
+  public static <T> ObjectWriter cborWriter(Class<T> clazz) {
     return cborMapper.writer()
         .forType(clazz);
   }
 
-  static <T> ObjectReader cborReader(Class<T> clazz) {
+  public static <T> ObjectReader cborReader(Class<T> clazz) {
     return cborMapper.reader()
         .forType(clazz);
   }

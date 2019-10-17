@@ -11,5 +11,8 @@ dependencies {
   annotationProcessor(
       "org.projectlombok:lombok:1.18.10"
   )
+  testImplementation(
+      "org.junit.jupiter:junit-jupiter-api:5.5.2"
+  )
 }
 

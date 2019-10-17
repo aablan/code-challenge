@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TemperatureData {
 
+  private String id;
   private double temperature;
   private GPSCoordinates coordinates;
   private Instant captureTime;
