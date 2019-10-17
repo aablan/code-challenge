@@ -1,4 +1,5 @@
 rootProject.name = 'code-challenge'
 include 'data-generator'
 include 'data-processor'
+include 'common'
 
