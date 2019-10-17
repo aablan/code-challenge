@@ -1,12 +1,9 @@
 dependencies {
     implementation(
-        "org.jetbrains:annotations:16.0.3",
         "org.springframework.kafka:spring-kafka:2.3.0.RELEASE",
-        "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.10.0",
-        "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.0",
         "org.springframework.boot:spring-boot-starter-web:2.1.9.RELEASE"
     )
-    compile(
+    compileOnly(
         "org.projectlombok:lombok:1.18.10"
     )
     annotationProcessor(

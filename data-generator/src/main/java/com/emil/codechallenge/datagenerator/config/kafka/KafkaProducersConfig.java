@@ -1,13 +1,8 @@
-/*
- * Copyright (C) Siemens AG 2019 ALL RIGHTS RESERVED.
- */
-
 package com.emil.codechallenge.datagenerator.config.kafka;
 
 import com.emil.codechallenge.common.model.temp.TemperatureData;
-import com.emil.codechallenge.datagenerator.utils.KafkaUtils;
+import com.emil.codechallenge.common.model.utils.KafkaUtils;
 import lombok.AllArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import lombok.val;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;

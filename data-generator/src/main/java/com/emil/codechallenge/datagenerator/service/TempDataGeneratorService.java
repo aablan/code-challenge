@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class DataGeneratorService {
+public class TempDataGeneratorService {
 
   private final KafkaTemplate<String, TemperatureData> kafkaTemperatureTemplate;
 
@@ -22,25 +22,30 @@ public class DataGeneratorService {
   public void generateData() throws InterruptedException {
 
     while (true) {
-      val temp = generateRandomTemperature();
-      val coordinates = generateRandomCoordinates();
-      log.info("Sending Temperature value of {} at location {}", temp, coordinates);
+      val temperatureData = TemperatureData.builder()
+          .temperature(generateRandomTemperature())
+          .coordinates(generateRandomCoordinates())
+          .captureTime(Instant.now())
+          .build();
+      log.info(
+          "Sending Temperature value of {} at location {}",
+          temperatureData.getTemperature(),
+          temperatureData.getCoordinates()
+      );
       kafkaTemperatureTemplate
-          .send(
-              "temperature_data",
-              TemperatureData.builder()
-                  .temperature(temp)
-                  .coordinates(coordinates)
-                  .captureTime(Instant.now())
-                  .build()
-          );
+          .send("temperature_data", temperatureData)
+          .completable()
+          .exceptionally(it -> {
+            log.error("Unable to send data object {}", temperatureData);
+            return null;
+          });
       Thread.sleep(5000);
     }
   }
 
-  private float generateRandomTemperature() {
+  private double generateRandomTemperature() {
     Random random = new Random();
-    return Math.round(random.nextFloat() * 1000) / 10.0f;
+    return Math.round(random.nextFloat() * 1000) / 10.0;
   }
 
   private GPSCoordinates generateRandomCoordinates() {
