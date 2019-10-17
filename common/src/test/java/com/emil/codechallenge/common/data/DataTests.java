@@ -11,7 +11,7 @@ import java.time.Instant;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 
-public class DataTests {
+class DataTests {
 
   private static GPSCoordinates RANDOM_COORDINATES = new GPSCoordinates(25.2f, 55.1f);
 
