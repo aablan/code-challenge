@@ -1,13 +1,37 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.1.4.RELEASE" apply false
+}
+
 allprojects {
     group 'com.emil.codechallenge'
     version '1.0'
     repositories {
         mavenCentral()
     }
+    tasks.withType(Checkstyle) {
+        enabled = false
+    }
 }
 subprojects {
     version = '1.0'
     apply plugin: 'java'
+    apply plugin: 'java-library'
     sourceCompatibility = 1.8
 }
 
+subprojects {
+    if (it.name != 'common') {
+        apply plugin: "org.springframework.boot"
+
+        task copyBootJarToAppJar(type: Copy) {
+            from bootJar.archiveFile
+            into project.buildDir
+
+            rename bootJar.archiveFileName.get(), 'app.jar'
+        }
+
+        copyBootJarToAppJar.shouldRunAfter bootJar
+        build.dependsOn copyBootJarToAppJar
+    }
+}
