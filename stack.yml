@@ -1,0 +1,43 @@
+version: '3'
+services:
+  data-generator:
+    build:
+      context: ./data-generator
+    environment:
+      - KAFKA_BROKERS=kafka-broker:9092
+    networks:
+      - emil-network
+    depends_on:
+      - kafka-broker
+
+  data-processor:
+    build:
+      context: ./data-processor
+    environment:
+      - KAFKA_BROKERS=kafka-broker:9092
+      - MONGO_URI=mongodb://mongo-service:27017/processed_data
+    networks:
+      - emil-network
+    depends_on:
+      - kafka-broker
+      - mongo-service
+
+  kafka-broker:
+    image: johnnypark/kafka-zookeeper
+    environment:
+      - ADVERTISED_HOST=kafka-broker
+      - NUM_PARTITIONS=10
+    networks:
+      - emil-network
+
+  mongo-service:
+    image: mongo
+    ports:
+      - "30000:27017"
+    networks:
+      - emil-network
+
+networks:
+  emil-network:
+    driver: "bridge"
+

@@ -3,13 +3,9 @@ spring:
     name: data-processor
   data:
     mongodb:
-      uri: ${MONGO_URI:mongodb://localhost:27017/processed_data}
+      uri: ${MONGO_URI}
   kafka:
-    bootstrap-servers: ${KAFKA_BROKERS:127.0.0.1:9092}
+    bootstrap-servers: ${KAFKA_BROKERS}
     consumer:
       auto-offset-reset: latest
       enable-auto-commit: true
-
-logging:
-  level:
-    com.emil.codechallenge: debug
