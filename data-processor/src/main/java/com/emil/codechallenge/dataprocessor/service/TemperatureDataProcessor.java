@@ -1,7 +1,7 @@
 package com.emil.codechallenge.dataprocessor.service;
 
 import com.emil.codechallenge.common.model.temp.TemperatureData;
-import com.emil.codechallenge.dataprocessor.service.persister.temp.TemperatureDataPersister;
+import com.emil.codechallenge.dataprocessor.service.persister.temperature.TemperatureDataPersister;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lombok.val;
@@ -24,7 +24,7 @@ public class TemperatureDataProcessor {
   public void onNewTemperatureData(ConsumerRecord<String, TemperatureData> record) {
     val temperatureDataPoint = record.value();
     log.debug("Saving temperature object {}", temperatureDataPoint);
-    temperatureDataPersister.save(record.value());
+    temperatureDataPersister.save(temperatureDataPoint);
     log.debug("Temperature object {} saved successfully", temperatureDataPoint);
   }
 }

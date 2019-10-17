@@ -11,4 +11,11 @@ dependencies {
         "org.projectlombok:lombok:1.18.10"
     )
     implementation project(':common')
+    testImplementation(
+        "org.junit.jupiter:junit-jupiter-api:5.5.2",
+        "org.springframework.boot:spring-boot-test:2.1.9.RELEASE",
+        "org.testcontainers:testcontainers:1.12.2",
+        "org.springframework:spring-test:5.2.0.RELEASE",
+        "org.assertj:assertj-core:3.13.2"
+    )
 }
