@@ -18,11 +18,10 @@ As mentioned before this project is using gradle for building and docker for con
 * Pre-requisites <br />
 1- Gradle 5.2 or later must be installed on the host machine.<br/>
 2- Docker must be installed on the host machine.<br/>
-3- Also the project is on github so you need to be able to checkout through command line or using your IDE.
 
 * How to run <br/>
-1- Check out the project to you host machine.<br/>
-2- Open a command line and navigate to the directory where you checked out the project.<br/>
+1- Check out the project to you host machine, Or just download and extract the project to a separate directory<br/>
+2- Open a command line and navigate to the directory where you checked out / downloaded the project.<br/>
 3- Run the command : "gradle build" .<br/>
 4- Run the command : "docker-compose -f stack.yml up -d" .<br/>
 5- After 1-2 minutes all the services should be up and running, you can check using the following command: <br/>
