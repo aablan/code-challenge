@@ -1,11 +1,10 @@
 package com.emil.codechallenge.common.data;
 
-import static com.emil.codechallenge.common.model.utils.CborUtils.cborReader;
-import static com.emil.codechallenge.common.model.utils.CborUtils.cborWriter;
+import static com.emil.codechallenge.common.utils.CborUtils.cborReader;
+import static com.emil.codechallenge.common.utils.CborUtils.cborWriter;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.emil.codechallenge.common.model.commons.GPSCoordinates;
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 import java.io.IOException;
 import java.time.Instant;
 import lombok.val;

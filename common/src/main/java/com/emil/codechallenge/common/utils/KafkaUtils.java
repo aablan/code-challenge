@@ -1,7 +1,7 @@
-package com.emil.codechallenge.common.model.utils;
+package com.emil.codechallenge.common.utils;
 
-import static com.emil.codechallenge.common.model.utils.CborUtils.cborReader;
-import static com.emil.codechallenge.common.model.utils.CborUtils.cborWriter;
+import static com.emil.codechallenge.common.utils.CborUtils.cborReader;
+import static com.emil.codechallenge.common.utils.CborUtils.cborWriter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.IOException;

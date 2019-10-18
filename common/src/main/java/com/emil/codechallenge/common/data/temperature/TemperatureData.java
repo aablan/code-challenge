@@ -1,6 +1,6 @@
-package com.emil.codechallenge.common.model.temp;
+package com.emil.codechallenge.common.data.temperature;
 
-import com.emil.codechallenge.common.model.commons.GPSCoordinates;
+import com.emil.codechallenge.common.data.GPSCoordinates;
 import java.time.Instant;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

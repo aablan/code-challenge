@@ -1,4 +1,4 @@
-package com.emil.codechallenge.common.model.commons;
+package com.emil.codechallenge.common.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

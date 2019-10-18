@@ -1,4 +1,4 @@
-package com.emil.codechallenge.common.model.utils;
+package com.emil.codechallenge.common.utils;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.databind.DeserializationFeature;

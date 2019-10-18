@@ -1,9 +1,9 @@
-package com.emil.codechallenge.dataprocessor.repository.dao;
+package com.emil.codechallenge.common.dao;
 
-import static com.emil.codechallenge.dataprocessor.repository.dao.TemperatureDataEntity.COLLECTION;
+import static com.emil.codechallenge.common.dao.TemperatureDataEntity.COLLECTION;
 
-import com.emil.codechallenge.common.model.commons.GPSCoordinates;
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.data.GPSCoordinates;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 import java.time.Instant;
 import lombok.AllArgsConstructor;
 import lombok.Data;

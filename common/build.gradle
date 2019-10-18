@@ -4,9 +4,11 @@ dependencies {
       "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.10.0",
       "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.0",
       "com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.0"
+
   )
   compileOnly(
-      "org.projectlombok:lombok:1.18.10"
+      "org.projectlombok:lombok:1.18.10",
+      "org.springframework.data:spring-data-mongodb:2.2.0.RELEASE"
   )
   annotationProcessor(
       "org.projectlombok:lombok:1.18.10"

@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/data-generator" />
             <option value="$PROJECT_DIR$/data-processor" />
+            <option value="$PROJECT_DIR$/web" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />
