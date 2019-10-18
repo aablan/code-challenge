@@ -1,7 +1,7 @@
 package com.emil.codechallenge.datagenerator.service;
 
-import com.emil.codechallenge.common.model.commons.GPSCoordinates;
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.data.GPSCoordinates;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 import java.time.Instant;
 import java.util.Random;
 import javax.annotation.PostConstruct;
@@ -11,10 +11,14 @@ import lombok.val;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
+
+/**
+ * Service class to push randomly generated data to kafka broker.
+ */
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class TempDataGeneratorService {
+public class TemperatureDataGeneratorService {
 
   private final KafkaTemplate<String, TemperatureData> kafkaTemperatureTemplate;
 

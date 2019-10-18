@@ -1,7 +1,7 @@
 package com.emil.codechallenge.datagenerator.config.kafka;
 
-import com.emil.codechallenge.common.model.temp.TemperatureData;
-import com.emil.codechallenge.common.model.utils.KafkaUtils;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
+import com.emil.codechallenge.common.utils.KafkaUtils;
 import lombok.AllArgsConstructor;
 import lombok.val;
 import org.apache.kafka.common.serialization.StringSerializer;
