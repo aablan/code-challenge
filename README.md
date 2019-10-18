@@ -1,5 +1,5 @@
 # code-challenge
-This is a sample project that has the following characteristics:
+This code-challenge project that has the following characteristics:
 * It is generates random data and push it to kafka broker to be consumed and processed by other modules/services.
 * It is build almost as complete separated micro-services.
 * Implemented using Java as programming language, Spring boot as development framework.
