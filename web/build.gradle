@@ -11,4 +11,12 @@ dependencies {
       "org.projectlombok:lombok:1.18.10"
   )
   implementation project(':common')
+  testImplementation(
+      "org.mockito:mockito-core:3.1.0",
+      "org.junit.jupiter:junit-jupiter-api:5.5.2",
+      "com.google.guava:guava:28.1-jre",
+      "org.springframework:spring-test:5.2.0.RELEASE",
+      "org.assertj:assertj-core:3.13.2"
+
+  )
 }
