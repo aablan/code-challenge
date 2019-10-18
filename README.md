@@ -1,7 +1,7 @@
 # code-challenge
 This code-challenge project that has the following characteristics:
-* It is generates random data and push it to kafka broker to be consumed and processed by other modules/services.
-* It is build almost as complete separated micro-services.
+* It generates random data and push it to kafka broker to be consumed and processed by other modules/services.
+* It is built almost as complete separated micro-services.
 * Implemented using Java as programming language, Spring boot as development framework.
 * It is a gradle project and the services are implemented as gradle sub-projects (modules).
 * The project modules are completely containerized with Docker
