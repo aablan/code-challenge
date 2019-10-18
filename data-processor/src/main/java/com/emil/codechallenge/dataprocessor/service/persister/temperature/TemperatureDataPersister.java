@@ -1,6 +1,6 @@
 package com.emil.codechallenge.dataprocessor.service.persister.temperature;
 
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 
 /**
  * Base interface for all temperature data persisters

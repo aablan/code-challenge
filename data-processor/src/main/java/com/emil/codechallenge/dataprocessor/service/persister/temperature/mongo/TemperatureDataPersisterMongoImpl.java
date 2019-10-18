@@ -1,8 +1,8 @@
 package com.emil.codechallenge.dataprocessor.service.persister.temperature.mongo;
 
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.dao.TemperatureDataEntity;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 import com.emil.codechallenge.dataprocessor.repository.TemperatureDataRepositoryMongo;
-import com.emil.codechallenge.dataprocessor.repository.dao.TemperatureDataEntity;
 import com.emil.codechallenge.dataprocessor.service.persister.temperature.TemperatureDataPersister;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

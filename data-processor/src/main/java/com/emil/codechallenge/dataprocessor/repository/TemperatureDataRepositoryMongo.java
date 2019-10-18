@@ -1,6 +1,6 @@
 package com.emil.codechallenge.dataprocessor.repository;
 
-import com.emil.codechallenge.dataprocessor.repository.dao.TemperatureDataEntity;
+import com.emil.codechallenge.common.dao.TemperatureDataEntity;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

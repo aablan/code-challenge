@@ -2,11 +2,11 @@ package com.emil.codechallenge.dataprocessor.service.persistor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.emil.codechallenge.common.model.commons.GPSCoordinates;
-import com.emil.codechallenge.common.model.temp.TemperatureData;
+import com.emil.codechallenge.common.dao.TemperatureDataEntity;
+import com.emil.codechallenge.common.data.GPSCoordinates;
+import com.emil.codechallenge.common.data.temperature.TemperatureData;
 import com.emil.codechallenge.dataprocessor.config.EmbeddedMongoContainerConfig;
 import com.emil.codechallenge.dataprocessor.repository.TemperatureDataRepositoryMongo;
-import com.emil.codechallenge.dataprocessor.repository.dao.TemperatureDataEntity;
 import com.emil.codechallenge.dataprocessor.service.persister.temperature.TemperatureDataPersister;
 import java.time.Instant;
 import java.util.List;
