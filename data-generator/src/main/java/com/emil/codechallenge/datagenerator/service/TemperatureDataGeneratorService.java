@@ -47,11 +47,22 @@ public class TemperatureDataGeneratorService {
     }
   }
 
+  /**
+   * Generates random temperature value, i.e rounded and divided to maintain a presentable format
+   * (only up to 2 decimal points)
+   *
+   * @return Randomly generated temperature value as double
+   */
   private double generateRandomTemperature() {
     Random random = new Random();
     return Math.round(random.nextFloat() * 1000) / 10.0;
   }
 
+  /**
+   * Generated random GPS coordinates, they are fake and not necessarily make sense, just for presentation purposes.
+   * @return GPSCoordinates Object
+   * @see GPSCoordinates
+   */
   private GPSCoordinates generateRandomCoordinates() {
     Random random = new Random();
     val latitude = random.nextFloat() * 100;
