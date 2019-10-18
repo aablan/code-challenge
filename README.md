@@ -18,6 +18,7 @@ As mentioned before this project is using gradle for building and docker for con
 * Pre-requisites <br />
 1- Gradle 5.2 or later must be installed on the host machine.<br/>
 2- Docker must be installed on the host machine.<br/>
+3- Oh yeah, and make sure you have a good internet connection (check your proxies if any) in order for the app to be able to pull the images.
 
 * How to run <br/>
 1- Check out the project to you host machine, Or just download and extract the project to a separate directory<br/>
