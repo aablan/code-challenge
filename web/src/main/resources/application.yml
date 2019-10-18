@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: web
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017/processed_data}
+server:
+  port: 8090
