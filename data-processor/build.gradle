@@ -1,21 +1,27 @@
 dependencies {
-    implementation(
-        "org.springframework.kafka:spring-kafka:2.3.0.RELEASE",
-        "org.springframework.boot:spring-boot-starter-data-mongodb:2.1.9.RELEASE",
-        "org.springframework.boot:spring-boot-starter-web:2.1.9.RELEASE"
-    )
-    compileOnly(
-        "org.projectlombok:lombok:1.18.10"
-    )
-    annotationProcessor(
-        "org.projectlombok:lombok:1.18.10"
-    )
-    implementation project(':common')
-    testImplementation(
-        "org.junit.jupiter:junit-jupiter-api:5.5.2",
-        "org.springframework.boot:spring-boot-test:2.1.9.RELEASE",
-        "org.testcontainers:testcontainers:1.12.2",
-        "org.springframework:spring-test:5.2.0.RELEASE",
-        "org.assertj:assertj-core:3.13.2"
-    )
+  implementation(
+      "org.springframework.kafka:spring-kafka:2.3.0.RELEASE",
+      "org.springframework.boot:spring-boot-starter-data-mongodb:2.1.9.RELEASE",
+      "org.springframework.boot:spring-boot-starter-web:2.1.9.RELEASE"
+  )
+  compileOnly(
+      "org.projectlombok:lombok:1.18.10"
+  )
+  annotationProcessor(
+      "org.projectlombok:lombok:1.18.10"
+  )
+  testCompileOnly(
+      "org.projectlombok:lombok:1.18.10"
+  )
+  testAnnotationProcessor(
+      "org.projectlombok:lombok:1.18.10"
+  )
+  implementation project(':common')
+  testImplementation(
+      "org.junit.jupiter:junit-jupiter-api:5.5.2",
+      "org.springframework.boot:spring-boot-test:2.1.9.RELEASE",
+      "org.testcontainers:testcontainers:1.12.2",
+      "org.springframework:spring-test:5.2.0.RELEASE",
+      "org.assertj:assertj-core:3.13.2"
+  )
 }

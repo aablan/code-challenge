@@ -30,6 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .anyRequest().authenticated()
         .and()
-        .formLogin();
+        .formLogin()
+        .defaultSuccessUrl("/api/temperature/1.0", true);
   }
 }

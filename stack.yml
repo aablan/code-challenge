@@ -21,6 +21,17 @@ services:
     depends_on:
       - kafka-broker
       - mongo-service
+  web:
+    build:
+      context: ./web
+    environment:
+      - MONGO_URI=mongodb://mongo-service:27017/processed_data
+    networks:
+      - emil-network
+    depends_on:
+      - mongo-service
+    ports:
+      - "8080:8080"
 
   kafka-broker:
     image: johnnypark/kafka-zookeeper
@@ -32,8 +43,6 @@ services:
 
   mongo-service:
     image: mongo
-    ports:
-      - "30000:27017"
     networks:
       - emil-network
 
